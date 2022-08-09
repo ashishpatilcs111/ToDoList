@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        ul li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" style="background-color: rgb(183, 168, 168);">
+        <div class="row pt-5 pt-5">
+            <div class="col-4"></div>
+            <div class="col-4 text-center" style="border-radius: 8px; background-color: rgb(81, 114, 114);">
+                <h2 style="color: rgb(229, 255, 0);">To Do List</h2>
+                <br>
+                <input type="text" id="inp" placeholder="Enter task"><button id="add" style="border-radius: 5px; width: 80px;">Add</button>
+                <ul id="ol1" style="color: rgb(229, 255, 0);">
+                    <br><br>
+                    <li id="l1" style="text-align:left;">Your Tasks--></li>
+                    <li id="l2" style="text-align:left;"></li>
+                    <li id="l3" style="text-align:left;"></li>
+                    <li id="l4" style="text-align:left;"></li>
+                    <li id="l5" style="text-align:left;"></li>
+                    <li id="l6" style="text-align:left;"></li>
+                    <li id="l7" style="text-align:left;"></li>
+                    <li id="l8" style="text-align:left;"></li>
+                    <li id="l9" style="text-align:left;"></li>
+                    <li id="l10" style="text-align:left;"></li>
+                    <li id="l11" style="text-align:left;"></li>
+                    <li id="l12" style="text-align:left;"></li>
+                    <li id="l13" style="text-align:left;"></li>
+                    <li id="l14" style="text-align:left;"></li>
+                    <li id="l15" style="text-align:left;"></li>
+                    <li id="l16" style="text-align:left;"></li>
+                    <li id="l17" style="text-align:left;"></li>
+                    <li id="l18" style="text-align:left;"></li>
+                    <li id="l19" style="text-align:left;"></li>
+                    <li id="l20" style="text-align:left;"></li>
+                    <li id="l21" style="text-align:left;"></li>
+                    <li id="l22" style="text-align:left;"></li>
+                    <li id="l23" style="text-align:left;"></li>
+                    <li id="l24" style="text-align:left;"></li>
+                    <li id="l25" style="text-align:left;"></li>
+                    <li id="l26" style="text-align:left;"></li>
+                    <li id="l27" style="text-align:left;"></li>
+                    <li id="l28" style="text-align:left;"></li>
+                    <li id="l29" style="text-align:left;"></li>
+                    <li id="l30" style="text-align:left;"></li>
+
+                </ul>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <br><br><br><br><br>
+    </div>
+    
+</body>
+</html>
+<script>
+    var c=2;
+    $(document).ready(function(){
+        $("#add").click(function(){
+        //  var a=  $("#l1").after("<li class=\"hide1\">"+$("#inp").val()+"</li>");
+            $("#l"+c).text(c-1+". "+$("#inp").val());
+            c++;
+          $("#ol1").css({'textAlign':'left'});
+          $("#inp").val("");
+        });
+          $("li").click(function(){
+          $(this).css({'backgroundColor':'green','color':'white'});
+          });
+          $("li").dblclick(function(){
+          $(this).hide();
+          });
+        //   $("li").mouseenter(function(){
+        //   $(this).css({'backgroundColor':'White','color':'black'});
+        //   });
+        //   $("li").mouseleave(function(){
+        //   $(this).css({'backgroundColor':'rgb(81, 114, 114)'});
+        //   });
+    });
+</script>
